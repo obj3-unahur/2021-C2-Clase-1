@@ -9,7 +9,7 @@ describe "Parque de Diversiones Tests" do
   end
 
   it 'New parque should be empty' do
-    expect(@parque.visitantes).eql?(0)
+    expect(@parque.visitantes.length).to eq 0
   end
 
   it 'Parque debe ser redituable' do
@@ -17,7 +17,7 @@ describe "Parque de Diversiones Tests" do
     @atraccion.usar @visitante
     @atraccion.usar @visitante
 
-    expect(@parque.redituable?).eql?(true)
+    expect(@parque.redituable?).to eq(true)
   end
 
   it 'AtraccionAcuativa debe tirar error si visitante no sabe nadar' do
